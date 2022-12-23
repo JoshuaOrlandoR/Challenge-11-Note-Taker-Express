@@ -7,7 +7,7 @@ const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 class DB {
-  async readNotes() {
+  async readNote() {
     try {
       const notesRaw = await readFileAsync(noteData, 'UTF8');
       return notesRaw ? JSON.parse(notesRaw) : [];
