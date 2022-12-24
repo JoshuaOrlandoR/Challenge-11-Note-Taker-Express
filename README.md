@@ -49,12 +49,11 @@ Adding New Note
 <br>
 Added Note - 
 <br>
-![image](https://user-images.githubusercontent.com/114437149/209452095-09228bb3-ed09-48da-bef3-292f3dd6defa.png)
+![image](https://user-images.githubusercontent.com/114437149/209452108-38ecc1fc-99a0-421a-b394-8670bbf19e18.png)
 <br>
+Delete Note
 <br>
-<br>
-<br>
-<br>
+![image](https://user-images.githubusercontent.com/114437149/209452137-0d9f6a50-0855-4943-8092-8edacb3c3789.png)
 <br>
 
 
