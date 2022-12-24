@@ -8,7 +8,7 @@ const writeNewNote = async (body, notesStorage) => {
   try {
     await fs.promises.writeFile(
       path.join(__dirname, '../db/db.json'),
-      JSON.stringify({ notes: notesStorage }, null, 2)
+      JSON.stringify({notesStorage}, null, 2)
     );
     return note;
   } catch (error) {

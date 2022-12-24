@@ -12,6 +12,7 @@ router.get('/notes', (req, res) => {
 
 //POST for /notes - THIS WAS A GET REQUEST FOR SO LONG - BIG SOURCE OF ISSUES 
 router.post('/notes', (req, res) => {
+  console.log(notesStorage);
     if(notesStorage) {
         req.body.id = notesStorage.length.toString();
     } else {
