@@ -15,8 +15,9 @@ app.use(express.json());
  app.use(express.static('public'));
 
  // middlewear for routes 
- app.use('/', htmlRoutes);
  app.use('/api', apiRoutes);
+ app.use('/', htmlRoutes);
+
 
  app.listen(PORT, () => {
     console.log(`Now listening on port ${PORT}`);
