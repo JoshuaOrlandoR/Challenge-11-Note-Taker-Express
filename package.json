@@ -1,14 +1,26 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaOrlandoR/Challenge-11-Note-Taker-Express.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JoshuaOrlandoR/Challenge-11-Note-Taker-Express/issues"
+  },
+  "homepage": "https://github.com/JoshuaOrlandoR/Challenge-11-Note-Taker-Express#readme",
+  "description": ""
 }
