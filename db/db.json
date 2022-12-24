@@ -1,14 +1,9 @@
 {
-  "notes": [
+  "notesStorage": [
     {
-      "title": "Test",
-      "text": "Test Text",
-      "id": "0"
-    },
-    {
-      "title": "Second Test",
-      "text": "Second text test",
-      "id": "1"
+      "title": "sdsdsdsd",
+      "text": "sdsdsdsdsdsd",
+      "id": 0
     }
   ]
 }
