@@ -2,29 +2,35 @@ const router = require('express').Router();
 
 const {writeNewNote, deleteNote} = require('../../helpers/notewriter');
 
-let {notesArray} = require('../../helpers/notewriter');
+let {notesStorage} = require ('../../db/db.json'); 
 
 //GET notes api 
 router.get('/notes', (req, res) => {
-    let output = notesArray;
+    let output = notesStorage;
     res.json(output);
 });
 
-//POST /notes
-router.get('/notes', (req, res) => {
-    if(notesArray) {
-        req.body.id = notesArray.length.toString();
+//POST for /notes - THIS WAS A GET REQUEST FOR SO LONG - BIG SOURCE OF ISSUES 
+router.post('/notes', (req, res) => {
+    if(notesStorage) {
+        req.body.id = notesStorage.length.toString();
     } else {
         req.body.id = 0
     }
-    res.json(writeNewNote(req.body, notesArray))
+    res.json(writeNewNote(req.body, notesStorage))
 });
 
-//DELETE params for /notes 
-router.delete('notes/:id', async (req, res) => {
-    const {id} = req.params
-    notesArray = await deleteNote (id, notesArray);
-    res.json(notesArray)
-});
+//DELETE params for /notes --> rewritten with a catch for errors - helped me figure out why delete wasnt working 
+router.delete('/notes/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      notesStorage = await deleteNote(id, notesStorage);
+      res.json(notesStorage);
+    } catch (error) {
+      console.error(error);
+      res.sendStatus(500);
+    }
+  });
+  
 
 module.exports = router;
